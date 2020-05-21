@@ -7,11 +7,15 @@ namespace CarGarage.Tests
     {
         [Fact]
         public void shouldAccelerate()
-        {   
+        {
             // Tests Accelerate() method in Car increases Speed
             // Arrange
+            Car myCar = new CarGarage.Car();
             // Act
+            myCar.Accelerate(5);
             // Assert
+            Assert.Equal(5, myCar.CurrentSpeed);
+
         }
 
         [Fact]
@@ -19,8 +23,11 @@ namespace CarGarage.Tests
         {
             // Tests Accelerate() method reduces Fuel amount
             // Arrange
+            Car myCar = new CarGarage.Car();
             // Act
+            myCar.ReduceFuel(5);
             // Assert
+            Assert.Equal(-5, myCar.CurrentFuel);
         }
 
         [Fact]
@@ -28,8 +35,11 @@ namespace CarGarage.Tests
         {
             // Tests AddFuel() method increases Fuel amount
             // Arrange
+            Car myCar = new CarGarage.Car();
             // Act
+            myCar.AddFuel(5);
             // Assert
+            Assert.Equal(+5, myCar.FuelingUp);
         }
 
         [Fact]
