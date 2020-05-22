@@ -5,13 +5,20 @@ namespace CarGarage.Tests
 {
     public class GarageTests
     {
+
+
         [Fact]
         public void shouldAddCarToGarage()
         {
             // Tests AddCar() method
             // Arrange
+            Garage myGarage = new CarGarage.Garage();
+
             // Act
+            myGarage.AddCar("ford");
+
             // Assert
+            Assert.NotNull(myGarage.EmptyGarage); 
         }
 
         [Fact]

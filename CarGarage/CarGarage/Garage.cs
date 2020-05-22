@@ -4,7 +4,17 @@ using System.Text;
 
 namespace CarGarage
 {
-    class Garage
+    public class Garage
     {
+        public List<Car> GarageCars = new List<Car>();
+       
+        
+        public void AddCar(string newCar)
+        {
+            GarageCars += newCar;
+        }
+
+
     }
+
 }
