@@ -47,8 +47,11 @@ namespace CarGarage.Tests
         {
             // Tests Brake() method in Car reduces Speed amount
             // Arrange
+            Car myCar = new CarGarage.Car();
             // Act
+            myCar.Brake(5);
             // Assert
+            Assert.Equal(-5, myCar.CurrentFuel);
         }
 
         [Fact]
@@ -56,8 +59,11 @@ namespace CarGarage.Tests
         {
             // Tests ToggleEngine() method starts car when its off
             // Arrange
+            Car myCar = new CarGarage.Car();
             // Act
+            myCar.EngineOn();
             // Assert
+            Assert.True(myCar.ToggleEngine);
         }
 
         [Fact]
@@ -65,8 +71,11 @@ namespace CarGarage.Tests
         {
             // Tests ToggleEngine() method turns car off when its on
             // Arrange
+            Car myCar = new CarGarage.Car();
             // Act
+            myCar.EngineOff();
             // Assert
+            Assert.False(myCar.ToggleEngine);
         }
     }
 }
